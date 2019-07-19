@@ -1,0 +1,17 @@
+html
+    head
+        h1 1board
+        script(type="text/javascript").
+            let messages = !{JSON.stringify(messages)}
+        script(src="../scripts/load_messages.js")
+        style
+            include ../style/style.css
+    body
+        #posthead 
+            h3 Messages
+        #message
+        form(action="#" onsubmit="checkScript()")
+            label(for="msg")
+            input(type="text" name="msg")
+            label(for="send")
+            input(type="submit" value="Send")
